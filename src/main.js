@@ -6,11 +6,13 @@ import VeeValidate from 'vee-validate'
 import App from './App'
 import router from './router'
 
-
-// axios for reach database
+// reference axios globally
 window.axios = axios
+
+// Global axios defaults
 axios.defaults.baseURL = 'http://127.0.0.1:3333'
 
+// register vee validate plugin
 Vue.use(VeeValidate)
 
 Vue.config.productionTip = false
@@ -19,6 +21,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  components: { App }
 })
