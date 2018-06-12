@@ -35,6 +35,7 @@
 </template>
 <script>
 import Notification from '@/components/Notification'
+import axios from 'axios'
 export default {
   name: 'LogInForm',
   components: {
