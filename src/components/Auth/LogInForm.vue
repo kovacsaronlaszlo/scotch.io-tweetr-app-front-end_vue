@@ -13,10 +13,10 @@
 
         <div class="field">
           <label>Password</label>
-          <input type="password" name="password" v-model="password" placeholder="Password" required>
+          <input type="password" name="password" v-model="password" placeholder="Jelszó" required>
         </div>
 
-        <button class="fluid ui primary button">LOG IN</button>
+        <button class="fluid ui primary button">Belépés</button>
 
         <div class="ui hidden divider"></div>
       </form>
@@ -26,7 +26,7 @@
       <div class="ui column grid">
         <div class="center aligned column">
           <p>
-            Don't have an account? <router-link to="/signup">Sign Up</router-link>
+            Nincs még fiókod? <router-link to="/signup">Regisztáció</router-link>
           </p>
         </div>
       </div>
