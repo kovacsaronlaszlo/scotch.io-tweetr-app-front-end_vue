@@ -60,7 +60,7 @@ export default {
   },
   computed: {
     isFormValid () {
-      return Object.keys(this.field).every(key => this.field[key].valid)
+      return Object.keys(this.fields).every(key => this.fields[key].valid)
     }
   },
   beforeRouteEnter (to, from, next) {
