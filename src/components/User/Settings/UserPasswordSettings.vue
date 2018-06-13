@@ -13,7 +13,7 @@
           <div class="field" :class="{ error: errors.has('password') }">
             <label>Jelenlegi jelszó</label>
             <input type="password" name="password" v-model="password" data-vv-as="current password" v-validate="'required'"/>
-            <span v-show="error.has('newPassword')" class="is-danger">{{ errors.first('password') }}</span>
+            <span v-show="errors.has('newPassword')" class="is-danger">{{ errors.first('password') }}</span>
           </div>
 
           <div class="field" :class="{ error: errors.has('newPassword') }">
