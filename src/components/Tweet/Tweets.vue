@@ -5,6 +5,7 @@
 </template>
 <script>
 import Tweet from '@/components/Tweet/Tweet'
+import EventBus from '@/eventBus'
 export default {
   name: 'Tweets',
   components: { Tweet },
@@ -14,8 +15,18 @@ export default {
       required: true
     },
     authUser: {
-      type: Object,
+      type: '',
       required: true
+    }
+  },
+  created () {
+    // figyeli az esemény létrehozást
+    EventBus.$on('tweetAdded', this.fetchAddedTweet)
+  },
+  methods: {
+    fetchAddedTweet (tweet) {
+      // hozzáadja a tweet-et a tweet-ek tetjéhez
+      this.tweets.unshift(tweet)
     }
   }
 }
